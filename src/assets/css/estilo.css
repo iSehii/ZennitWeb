@@ -1596,7 +1596,7 @@ pre {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: #212529;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -3551,8 +3551,16 @@ input[type="button"].btn-block {
       -ms-flex-preferred-size: auto;
       flex-basis: auto; }
     .navbar-expand-sm .navbar-toggler {
-      display: none; } }
-
+      display: none; }
+    .navbarTitle {
+      display:  none;
+    } }
+.navbarTitle {
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid {
@@ -5348,7 +5356,7 @@ a.close.disabled {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #007bff !important; }
+  background-color: #212529 !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -5397,7 +5405,22 @@ button.bg-danger:focus {
 
 .bg-light {
   background-color: #f8f9fa !important; }
-
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+@media (min-width: 768px) {
+  .row-cols-md-2>* {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+.gx-5 {
+  --bs-gutter-x: 3rem;
+}
+.row-cols-1>* {
+  flex: 0 0 auto;
+  width: 50%;
+}
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
@@ -8158,7 +8181,10 @@ h1, h2, h3, h4, h5,
   color: #000; }
 
 .bg-primary {
-  background: #f35588 !important; }
+  background: #8d0000 !important;
+}.bg-headerr {
+  background: #531103 !important;
+}
 
 .ftco-section {
   padding: 7em 0; }
@@ -8344,7 +8370,7 @@ h1, h2, h3, h4, h5,
   box-shadow: none !important;
   font-size: 15px;
   padding: 10px 20px;
-  border-radius: 50px; }
+  border-radius: 13px; }
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {

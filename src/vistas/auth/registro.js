@@ -3,12 +3,13 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../../assets/css/estilo.css';
 import bootstrap from '../../assets/css/estilo.css';
+import Layout from '../layouts';
 
 function Login() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:3005/api/bancos/Proyecto');
+                const response = await axios.get('https://zennit-api.onrender.com/api/bancos/Proyecto');
             } catch (error) {
                 console.log(error);
             }
@@ -21,11 +22,12 @@ function Login() {
     }, []);
 
     return (
+        <Layout>
         <section className="container-fluid" style={{ backgroundColor: '#210506' }}>
             <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet" />
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-            <div className="container" style={{ backgroundColor: '#210506', minHeight: '100vh' }}>
-                <div className="row justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+            <div className="container" style={{ backgroundColor: '#210506', minHeight: '89.1vh' }}>
+                <div className="row justify-content-center align-items-center" style={{ minHeight: '89.1vh' }}>
                     <div className="col-md-12 col-lg-10">
                         <div className="wrap d-md-flex shadow-lg">
                             <div className="text-wrap p-3 p-lg-5 text-center d-flex align-items-center order-md-last" style={{ backgroundColor: '#a70000' }}>
@@ -83,6 +85,8 @@ function Login() {
                 </div>
             </div>
         </section>
+        </Layout>
+
     );
 }
 
